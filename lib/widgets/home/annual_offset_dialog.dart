@@ -323,7 +323,7 @@ class AnnualOffsetDialog extends StatelessWidget {
                         ),
                         child: Icon(
                           Entypo.info,
-                          size: 25.0,
+                          size: 22.0,
                           color: Colors.white,
                         ),
                       ),
