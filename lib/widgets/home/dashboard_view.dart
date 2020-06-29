@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pocketapp/models/home/dashboard.dart';
 import 'package:pocketapp/view_models/home_view_model.dart';
 import 'package:pocketapp/widgets/home/annual_offset_dialog.dart';
+import 'package:pocketapp/widgets/home/mytree_pool_dialog.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../no_internet_connection.dart';
@@ -32,8 +33,13 @@ class DashboardState extends State<DashboardScreen> {
   void annualOffsetWidget() {
     Navigator.of(context).push(PageRouteBuilder(
         opaque: false,
-        pageBuilder: (BuildContext context, _, __) =>
-            AnnualOffsetDialog()));
+        pageBuilder: (BuildContext context, _, __) => AnnualOffsetDialog()));
+  }
+
+  void myTreePoolWidget() {
+    Navigator.of(context).push(PageRouteBuilder(
+        opaque: false,
+        pageBuilder: (BuildContext context, _, __) => MyTreePoolDialog()));
   }
 
   @override
@@ -154,15 +160,18 @@ class DashboardState extends State<DashboardScreen> {
                         topLeft: Radius.circular(20.0),
                         bottomLeft: Radius.circular(20.0)),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 10.0, horizontal: 40.0),
-                    child: Text(
-                      'MyTree Pool',
-                      style: TextStyle(
-                          color: Colors.green[50],
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.w600),
+                  child: InkWell(
+                    onTap: myTreePoolWidget,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 40.0),
+                      child: Text(
+                        'MyTree Pool',
+                        style: TextStyle(
+                            color: Colors.green[50],
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w600),
+                      ),
                     ),
                   ),
                 ),

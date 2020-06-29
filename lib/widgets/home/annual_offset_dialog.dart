@@ -1,4 +1,3 @@
-//import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -310,7 +309,7 @@ class AnnualOffsetDialog extends StatelessWidget {
                         ),
                         child:Text(
                           "Need a little extra help?",style: TextStyle(
-                            color: Colors.green[900],fontSize: 18
+                            color: Colors.green[900],fontSize: 18,   fontWeight: FontWeight.w900,
                         ),
                         ),
                       ),

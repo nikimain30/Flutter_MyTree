@@ -1,0 +1,302 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:fluttericon/entypo_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+class MyTreePoolDialog extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      backgroundColor: Colors.green[50].withOpacity(0.99),
+      body: Container(
+        height: double.maxFinite,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            Align(
+              alignment: Alignment.topRight,
+              child: InkWell(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 10.0),
+                  child: Text(
+                    '\$26.50',
+                    textAlign: TextAlign.end,
+                    style: TextStyle(
+                        color: Colors.green[900],
+                        fontWeight: FontWeight.w900,
+                        fontSize: 20.0),
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.topRight,
+              child: Stack(
+                children: <Widget>[
+                  new Container(
+                    margin: EdgeInsets.only(left: 30.0, top: 20.0),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20.0, horizontal: 20.0),
+                    decoration: new BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.rectangle,
+                      borderRadius:
+                          BorderRadius.only(topLeft: Radius.circular(40.0)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 10.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              Text(
+                                '3,900',
+                                style: TextStyle(
+                                    color: Colors.teal[900],
+                                    fontSize: 55.0,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                              Text(
+                                'carbon (kg)',
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 22.0,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 15.0),
+                                child: Row(
+                                  children: <Widget>[
+                                    Text(
+                                      '3.9',
+                                      style: TextStyle(
+                                          color: Colors.teal[900],
+                                          fontSize: 35.0,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                    Text(
+                                      '  tonnes',
+                                      style: TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 22.0,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 20.0, right: 20.0, left: 40.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    'worth',
+                                    style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 22.0,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Text(
+                                    '\$58.50',
+                                    style: TextStyle(
+                                        color: Colors.teal[900],
+                                        fontSize: 28.0,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              )),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: new Container(
+                        decoration: new BoxDecoration(
+                          color: Colors.teal[900],
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(20.0),
+                              bottomLeft: Radius.circular(20.0)),
+                        ),
+                        child: InkWell(
+                          onTap: null,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 15.0),
+                            child: Text(
+                              'MyTree Pool',
+                              style: TextStyle(
+                                  color: Colors.green[50],
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        )),
+                  )
+                ],
+              ),
+            ),
+            new Container(
+              margin: EdgeInsets.only(left: 30),
+              decoration: new BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.rectangle,
+                borderRadius:
+                    BorderRadius.only(bottomLeft: Radius.circular(40.0)),
+              ),
+              child: Column(
+                children: <Widget>[
+                  Align(
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(left: 15.0, right: 15.0),
+                          decoration: new BoxDecoration(
+                            color: Colors.grey,
+                            shape: BoxShape.rectangle,
+                          ),
+                          height: 2.0,
+                          width: 140,
+                        ),
+                        new Container(
+                          decoration: new BoxDecoration(
+                            color: Colors.teal[900],
+                            shape: BoxShape.rectangle,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(20.0),
+                                bottomLeft: Radius.circular(20.0)),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 25.0),
+                            child: Text(
+                              'Your market activity',
+                              style: TextStyle(
+                                  color: Colors.green[50],
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    alignment: Alignment.topRight,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      new Container(
+                        margin: EdgeInsets.only(
+                            top: 20.0, bottom: 20.0, left: 20.0, right: 20.0),
+                        child: Icon(
+                          FontAwesomeIcons.tree,
+                          size: 50.0,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: 10.0, bottom: 10.0, left: 20.0, right: 20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              '1,300',
+                              style: TextStyle(
+                                  color: Colors.teal[900],
+                                  fontSize: 35.0,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            Text(
+                              'carbon (kg)',
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                            vertical: 15.0, horizontal: 20.0),
+                        child: Text(
+                          'via Trees',
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 22.0,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            new Positioned(
+              child: new Align(
+                  alignment: FractionalOffset.bottomRight,
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 50),
+                    child: Stack(
+                      children: <Widget>[
+                        Align(
+                          child: Container(
+                            margin: const EdgeInsets.only(top: 10),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 70.0),
+                            decoration: new BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(40.0),
+                                  topLeft: Radius.circular(40.0)),
+                            ),
+                            child: Text(
+                              "Need a little extra help?",
+                              style: TextStyle(
+                                color: Colors.green[900],
+                                fontSize: 18,
+                                fontWeight: FontWeight.w900,
+                              ),
+                            ),
+                          ),
+                          alignment: Alignment.topRight,
+                        ),
+                        Align(
+                          alignment: Alignment.topRight,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 15, horizontal: 15),
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            decoration: new BoxDecoration(
+                              color: Colors.green[900],
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Entypo.info,
+                              size: 22.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )),
+            )
+          ],
+        ),
+      ),
+//      ),
+    );
+  }
+}
