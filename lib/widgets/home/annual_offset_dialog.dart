@@ -5,10 +5,13 @@ import 'package:fluttericon/entypo_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AnnualOffsetDialog extends StatelessWidget {
+
+  void helpWidget(BuildContext context) {
+    Navigator.of(context).pushNamed("/help");
+  }
+
   @override
   Widget build(BuildContext context) {
-
-
     // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.green[50].withOpacity(0.97),
@@ -293,41 +296,44 @@ class AnnualOffsetDialog extends StatelessWidget {
             new Positioned(
               child: new Align(
                   alignment: FractionalOffset.bottomLeft,
-                child: Container(
-                  margin: const EdgeInsets.only(top: 50,right: 50.0),
-                  child: Stack(
-                    children: <Widget>[
-                      Container(
-                        margin: const EdgeInsets.only(top: 10,right: 15.0),
-                        padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 70.0),
-                        decoration: new BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.rectangle,
-                          borderRadius:
-                          BorderRadius.only(bottomRight: Radius.circular(40.0),
-                              topRight: Radius.circular(40.0)),
-                        ),
-                        child:Text(
-                          "Need a little extra help?",style: TextStyle(
-                            color: Colors.green[900],fontSize: 18,   fontWeight: FontWeight.w900,
-                        ),
-                        ),
+                child: InkWell(
+                  onTap: () => helpWidget(context),
+                    child: Container(
+                      margin: const EdgeInsets.only(top: 50,right: 50.0),
+                      child: Stack(
+                        children: <Widget>[
+                          Container(
+                            margin: const EdgeInsets.only(top: 10,right: 15.0),
+                            padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 70.0),
+                            decoration: new BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.rectangle,
+                              borderRadius:
+                              BorderRadius.only(bottomRight: Radius.circular(40.0),
+                                  topRight: Radius.circular(40.0)),
+                            ),
+                            child:Text(
+                              "Need a little extra help?",style: TextStyle(
+                              color: Colors.green[900],fontSize: 18,   fontWeight: FontWeight.w900,
+                            ),
+                            ),
+                          ),
+                          new Container(
+                            padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 15),
+                            margin: const EdgeInsets.only(left:10.0,right: 30.0),
+                            decoration: new BoxDecoration(
+                              color: Colors.green[900],
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Entypo.info,
+                              size: 22.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
-                      new Container(
-                        padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 15),
-                        margin: const EdgeInsets.only(left:10.0,right: 30.0),
-                        decoration: new BoxDecoration(
-                          color: Colors.green[900],
-                          shape: BoxShape.circle,
-                        ),
-                        child: Icon(
-                          Entypo.info,
-                          size: 22.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
+                    )
                 )
               ),
             )

@@ -4,6 +4,11 @@ import 'package:fluttericon/entypo_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyTreePoolDialog extends StatelessWidget {
+
+  void helpWidget(BuildContext context) {
+    Navigator.of(context).pushNamed("/help");
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -249,7 +254,9 @@ class MyTreePoolDialog extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
+        InkWell(
+          onTap: () => helpWidget(context),
+           child:  Container(
               margin: const EdgeInsets.only(top: 60),
               child: Stack(
                 children: <Widget>[
@@ -296,6 +303,7 @@ class MyTreePoolDialog extends StatelessWidget {
                 ],
               ),
             ),
+        ),
           ],
         ),
       ),

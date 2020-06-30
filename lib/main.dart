@@ -3,6 +3,7 @@ import 'package:pocketapp/pages/home/home_screen.dart';
 import 'package:pocketapp/pages/register/login_screen.dart';
 import 'package:pocketapp/pages/splash_screen.dart';
 import 'package:pocketapp/pages/tutorial_screen.dart';
+import 'package:pocketapp/widgets/help/help.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         '/register': (BuildContext context) => new LoginScreen(),
         '/login': (BuildContext context) => new ProfileScreen(),
         '/login': (BuildContext context) => new InformationScreen(),
-        '/home': (BuildContext context) => new HomeScreen()
+        '/home': (BuildContext context) => new HomeScreen(),
+        '/help': (BuildContext context) => new HelpScreen()
       },
     );
   }

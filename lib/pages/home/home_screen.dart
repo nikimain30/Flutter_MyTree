@@ -50,22 +50,27 @@ class HomeState extends State<HomeScreen> {
         items: [
           BottomNavigationBarItem(
             icon: new Icon(Icons.dashboard,
-            color: Colors.lightGreen[600],size: 30.0,),
+                color: Colors.grey[600],size: 30.0),
+            activeIcon: new Icon(Icons.dashboard,
+            color: Colors.lightGreen[600],size: 30.0),
             title: Text(""),
           ),
           BottomNavigationBarItem(
-            icon: new Icon(Icons.equalizer,
-                color: Colors.lightGreen[600],size: 30.0,),
+            icon: new Icon(Icons.equalizer, color: Colors.grey[600], size: 30.0,),
+            activeIcon: new Icon(Icons.equalizer,
+                color: Colors.lightGreen[600],size: 30.0),
             title: Text(""),
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.group,
-                  color: Colors.lightGreen[600],size: 30.0,),
+              icon: Icon(Icons.group, color: Colors.grey[600],size: 30.0,),
+            activeIcon: new Icon(Icons.group,
+                color: Colors.lightGreen[600],size: 30.0),
             title: Text(""),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings,
-                color: Colors.lightGreen[600],size: 30.0,),
+            icon: Icon(Icons.settings, color: Colors.grey[600],size: 30.0,),
+            activeIcon: new Icon(Icons.settings,
+                color: Colors.lightGreen[600],size: 30.0),
             title: Text(""),
           )
         ],

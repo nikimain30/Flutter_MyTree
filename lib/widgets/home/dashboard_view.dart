@@ -39,7 +39,6 @@ class DashboardState extends State<DashboardScreen> {
 
   void myTreePoolWidget() {
     Navigator.of(context).push(PageRouteBuilder(
-
         opaque: false,
         pageBuilder: (BuildContext context, _, __) => MyTreePoolDialog(),fullscreenDialog: false));
   }
