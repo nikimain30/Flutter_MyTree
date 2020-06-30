@@ -1,3 +1,4 @@
+
 import 'package:bezier_chart/bezier_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/elusive_icons.dart';
@@ -33,13 +34,14 @@ class DashboardState extends State<DashboardScreen> {
   void annualOffsetWidget() {
     Navigator.of(context).push(PageRouteBuilder(
         opaque: false,
-        pageBuilder: (BuildContext context, _, __) => AnnualOffsetDialog()));
+        pageBuilder: (BuildContext context, _, __) => AnnualOffsetDialog(),fullscreenDialog: false));
   }
 
   void myTreePoolWidget() {
     Navigator.of(context).push(PageRouteBuilder(
+
         opaque: false,
-        pageBuilder: (BuildContext context, _, __) => MyTreePoolDialog()));
+        pageBuilder: (BuildContext context, _, __) => MyTreePoolDialog(),fullscreenDialog: false));
   }
 
   @override

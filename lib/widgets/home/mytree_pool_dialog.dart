@@ -35,7 +35,7 @@ class MyTreePoolDialog extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   new Container(
-                    margin: EdgeInsets.only(left:30,top: 20.0),
+                    margin: EdgeInsets.only(left: 30, top: 20.0),
                     padding: const EdgeInsets.symmetric(
                         vertical: 20.0, horizontal: 10.0),
                     decoration: new BoxDecoration(
@@ -45,8 +45,7 @@ class MyTreePoolDialog extends StatelessWidget {
                           BorderRadius.only(topLeft: Radius.circular(40.0)),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
@@ -79,7 +78,6 @@ class MyTreePoolDialog extends StatelessWidget {
                                       ),
                                     ],
                                   )
-
                                 ],
                               )),
                           Column(
@@ -116,7 +114,6 @@ class MyTreePoolDialog extends StatelessWidget {
                                           fontSize: 35.0,
                                           fontWeight: FontWeight.w600),
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -252,55 +249,52 @@ class MyTreePoolDialog extends StatelessWidget {
                 ],
               ),
             ),
-         Container(
-                    margin: const EdgeInsets.only(top: 60),
-                    child: Stack(
-                      children: <Widget>[
-                        Align(
-
-                          child: Container(
-                            margin: const EdgeInsets.only(top: 10),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 70.0),
-                            decoration: new BoxDecoration(
-                              color: Colors.white,
-                              shape: BoxShape.rectangle,
-                              borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(40.0),
-                                  topLeft: Radius.circular(40.0)),
-                            ),
-                            child: Text(
-                              "Need a little extra help?",
-                              style: TextStyle(
-                                color: Colors.green[900],
-                                fontSize: 18,
-                                fontWeight: FontWeight.w900,
-                              ),
-                            ),
-                          ),
-                          alignment: Alignment.bottomRight,
+            Container(
+              margin: const EdgeInsets.only(top: 60),
+              child: Stack(
+                children: <Widget>[
+                  Align(
+                    child: Container(
+                      margin: const EdgeInsets.only(top: 10),
+                      padding: EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 70.0),
+                      decoration: new BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(40.0),
+                            topLeft: Radius.circular(40.0)),
+                      ),
+                      child: Text(
+                        "Need a little extra help?",
+                        style: TextStyle(
+                          color: Colors.green[900],
+                          fontSize: 18,
+                          fontWeight: FontWeight.w900,
                         ),
-                        Align(
-                          alignment: Alignment.bottomRight,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 15, horizontal: 15),
-                            margin:
-                                const EdgeInsets.only(left: 10.0, right: 10.0),
-                            decoration: new BoxDecoration(
-                              color: Colors.green[900],
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Entypo.info,
-                              size: 22.0,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-
+                    alignment: Alignment.bottomRight,
+                  ),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 15),
+                      margin: const EdgeInsets.only(left: 10.0, right: 10.0),
+                      decoration: new BoxDecoration(
+                        color: Colors.green[900],
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Entypo.info,
+                        size: 22.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

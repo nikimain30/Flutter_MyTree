@@ -11,7 +11,7 @@ class AnnualOffsetDialog extends StatelessWidget {
 
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Colors.green[50].withOpacity(0.99),
+      backgroundColor: Colors.green[50].withOpacity(0.97),
       body: Container(
         height: double.maxFinite,
         child: Column(
