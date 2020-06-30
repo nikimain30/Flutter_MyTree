@@ -35,9 +35,9 @@ class MyTreePoolDialog extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   new Container(
-                    margin: EdgeInsets.only(left: 30.0, top: 20.0),
+                    margin: EdgeInsets.only(left:30,top: 20.0),
                     padding: const EdgeInsets.symmetric(
-                        vertical: 20.0, horizontal: 20.0),
+                        vertical: 20.0, horizontal: 10.0),
                     decoration: new BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.rectangle,
@@ -46,10 +46,42 @@ class MyTreePoolDialog extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 10.0, horizontal: 10.0),
+                          vertical: 10.0),
                       child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
+                          Padding(
+                              padding: const EdgeInsets.only(
+                                  right: 20.0, left: 10.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: <Widget>[
+                                  Text(
+                                    'from',
+                                    style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 22.0,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Icon(
+                                        Icons.group,
+                                        size: 30.0,
+                                        color: Colors.grey,
+                                      ),
+                                      Text(
+                                        ' 105',
+                                        style: TextStyle(
+                                            color: Colors.teal[900],
+                                            fontSize: 28.0,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                    ],
+                                  )
+
+                                ],
+                              )),
                           Column(
                             children: <Widget>[
                               Text(
@@ -60,7 +92,7 @@ class MyTreePoolDialog extends StatelessWidget {
                                     fontWeight: FontWeight.w600),
                               ),
                               Text(
-                                'carbon (kg)',
+                                'carbon (t)',
                                 style: TextStyle(
                                     color: Colors.grey,
                                     fontSize: 22.0,
@@ -71,46 +103,25 @@ class MyTreePoolDialog extends StatelessWidget {
                                 child: Row(
                                   children: <Widget>[
                                     Text(
-                                      '3.9',
-                                      style: TextStyle(
-                                          color: Colors.teal[900],
-                                          fontSize: 35.0,
-                                          fontWeight: FontWeight.w600),
-                                    ),
-                                    Text(
-                                      '  tonnes',
+                                      'kg',
                                       style: TextStyle(
                                           color: Colors.grey,
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.w600),
                                     ),
+                                    Text(
+                                      '   12,205,000',
+                                      style: TextStyle(
+                                          color: Colors.teal[900],
+                                          fontSize: 35.0,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+
                                   ],
                                 ),
                               ),
                             ],
                           ),
-                          Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 20.0, right: 20.0, left: 40.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    'worth',
-                                    style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize: 22.0,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                  Text(
-                                    '\$58.50',
-                                    style: TextStyle(
-                                        color: Colors.teal[900],
-                                        fontSize: 28.0,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                ],
-                              )),
                         ],
                       ),
                     ),
@@ -197,8 +208,8 @@ class MyTreePoolDialog extends StatelessWidget {
                         margin: EdgeInsets.only(
                             top: 20.0, bottom: 20.0, left: 20.0, right: 20.0),
                         child: Icon(
-                          FontAwesomeIcons.tree,
-                          size: 50.0,
+                          Icons.equalizer,
+                          size: 40.0,
                           color: Colors.grey,
                         ),
                       ),
@@ -229,7 +240,7 @@ class MyTreePoolDialog extends StatelessWidget {
                         padding: EdgeInsets.symmetric(
                             vertical: 15.0, horizontal: 20.0),
                         child: Text(
-                          'via Trees',
+                          'For sale',
                           style: TextStyle(
                               color: Colors.grey,
                               fontSize: 22.0,
@@ -241,14 +252,12 @@ class MyTreePoolDialog extends StatelessWidget {
                 ],
               ),
             ),
-            new Positioned(
-              child: new Align(
-                  alignment: FractionalOffset.bottomRight,
-                  child: Container(
-                    margin: const EdgeInsets.only(top: 50),
+         Container(
+                    margin: const EdgeInsets.only(top: 60),
                     child: Stack(
                       children: <Widget>[
                         Align(
+
                           child: Container(
                             margin: const EdgeInsets.only(top: 10),
                             padding: EdgeInsets.symmetric(
@@ -269,10 +278,10 @@ class MyTreePoolDialog extends StatelessWidget {
                               ),
                             ),
                           ),
-                          alignment: Alignment.topRight,
+                          alignment: Alignment.bottomRight,
                         ),
                         Align(
-                          alignment: Alignment.topRight,
+                          alignment: Alignment.bottomRight,
                           child: Container(
                             padding: const EdgeInsets.symmetric(
                                 vertical: 15, horizontal: 15),
@@ -291,8 +300,8 @@ class MyTreePoolDialog extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )),
-            )
+
+            ),
           ],
         ),
       ),
