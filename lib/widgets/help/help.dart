@@ -31,7 +31,7 @@ class HelpState extends State<HelpScreen> {
             color: Colors.white,
             shape: BoxShape.rectangle,
             borderRadius:
-            BorderRadius.all(Radius.circular(30.0)),
+            BorderRadius.all(Radius.circular(10.0)),
           ),
          child: Column(
            crossAxisAlignment: CrossAxisAlignment.start,

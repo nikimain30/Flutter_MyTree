@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pocketapp/view_models/home_view_model.dart';
+import 'package:pocketapp/widgets/home/calculate_view.dart';
 import 'package:pocketapp/widgets/home/dashboard_view.dart';
 import 'package:pocketapp/widgets/home/equalizer_view.dart';
 import 'package:pocketapp/widgets/home/settings_view.dart';
@@ -23,7 +24,8 @@ class HomeState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     DashboardScreen(),
-    PoolScreen(),
+//    PoolScreen(),
+  CalculateScreen(),
     UserScreen(),
     SettingsScreen(),
   ];
