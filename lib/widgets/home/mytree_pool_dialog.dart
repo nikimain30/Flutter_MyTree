@@ -14,8 +14,11 @@ class MyTreePoolDialog extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.green[50].withOpacity(0.99),
-      body: Container(
-        height: double.maxFinite,
+      body: SingleChildScrollView(
+      child: Container(
+      margin: const EdgeInsets.only(top: 25.0,bottom: 25.0),
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
@@ -23,7 +26,7 @@ class MyTreePoolDialog extends StatelessWidget {
               alignment: Alignment.topRight,
               child: InkWell(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 10.0),
+                  padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
                   child: Text(
                     '\$26.50',
                     textAlign: TextAlign.end,
@@ -64,7 +67,7 @@ class MyTreePoolDialog extends StatelessWidget {
                                     'from',
                                     style: TextStyle(
                                         color: Colors.grey,
-                                        fontSize: 22.0,
+                                        fontSize: 20.0,
                                         fontWeight: FontWeight.w600),
                                   ),
                                   Row(
@@ -78,7 +81,7 @@ class MyTreePoolDialog extends StatelessWidget {
                                         ' 105',
                                         style: TextStyle(
                                             color: Colors.teal[900],
-                                            fontSize: 28.0,
+                                            fontSize: 25.0,
                                             fontWeight: FontWeight.w600),
                                       ),
                                     ],
@@ -91,14 +94,14 @@ class MyTreePoolDialog extends StatelessWidget {
                                 '3,900',
                                 style: TextStyle(
                                     color: Colors.teal[900],
-                                    fontSize: 55.0,
+                                    fontSize: 45.0,
                                     fontWeight: FontWeight.w600),
                               ),
                               Text(
                                 'carbon (t)',
                                 style: TextStyle(
                                     color: Colors.grey,
-                                    fontSize: 22.0,
+                                    fontSize: 20.0,
                                     fontWeight: FontWeight.w600),
                               ),
                               Container(
@@ -109,14 +112,14 @@ class MyTreePoolDialog extends StatelessWidget {
                                       'kg',
                                       style: TextStyle(
                                           color: Colors.grey,
-                                          fontSize: 22.0,
+                                          fontSize: 20.0,
                                           fontWeight: FontWeight.w600),
                                     ),
                                     Text(
                                       '   12,205,000',
                                       style: TextStyle(
                                           color: Colors.teal[900],
-                                          fontSize: 35.0,
+                                          fontSize: 30.0,
                                           fontWeight: FontWeight.w600),
                                     ),
                                   ],
@@ -170,14 +173,15 @@ class MyTreePoolDialog extends StatelessWidget {
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
-                        Container(
-                          margin: EdgeInsets.only(left: 15.0, right: 15.0),
-                          decoration: new BoxDecoration(
-                            color: Colors.grey,
-                            shape: BoxShape.rectangle,
+                        Expanded(
+                          child: new Container(
+                            margin: const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Divider(
+                              thickness: 4,
+                              height: 2,
+                              color: Colors.grey,
+                            ),
                           ),
-                          height: 2.0,
-                          width: 140,
                         ),
                         new Container(
                           decoration: new BoxDecoration(
@@ -189,7 +193,7 @@ class MyTreePoolDialog extends StatelessWidget {
                           ),
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 25.0),
+                                vertical: 10.0,horizontal: 10.0),
                             child: Text(
                               'Your market activity',
                               style: TextStyle(
@@ -306,6 +310,7 @@ class MyTreePoolDialog extends StatelessWidget {
         ),
           ],
         ),
+      ),
       ),
 //      ),
     );
