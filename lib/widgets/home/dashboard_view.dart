@@ -113,25 +113,23 @@ class DashboardState extends State<DashboardScreen> {
                     )),
               ],
             ),
-
-    Stack(
-      alignment: Alignment.topRight,
+            Stack(
+              alignment: Alignment.topRight,
               children: <Widget>[
-
-               new Container(
-                    margin: EdgeInsets.only(top: 20.0),
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0,
-                        vertical: 20.0),
-                    decoration: new BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(40.0),
-                          bottomLeft: Radius.circular(40.0)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10.0, horizontal: 20.0),
+                new Container(
+                  margin: EdgeInsets.only(top: 20.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 20.0),
+                  decoration: new BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40.0),
+                        bottomLeft: Radius.circular(40.0)),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10.0, horizontal: 20.0),
                     child: Column(
                       children: <Widget>[
                         Text(
@@ -149,14 +147,12 @@ class DashboardState extends State<DashboardScreen> {
                               fontWeight: FontWeight.w600),
                         ),
                       ],
-                      ),
                     ),
+                  ),
                 ),
-
                 Align(
                   alignment: Alignment.topRight,
-                  child:
-                  new Container(
+                  child: new Container(
                     decoration: new BoxDecoration(
                       color: Colors.teal[900],
                       shape: BoxShape.rectangle,
@@ -181,8 +177,7 @@ class DashboardState extends State<DashboardScreen> {
                   ),
                 ),
               ],
-
-    ),
+            ),
           ],
         ));
 
@@ -200,8 +195,7 @@ class DashboardState extends State<DashboardScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               new Container(
-                padding:
-                    const EdgeInsets.only(top: 20.0, left: 30),
+                padding: const EdgeInsets.only(top: 20.0, left: 30),
                 child: Column(
                   children: <Widget>[
                     new Padding(
@@ -241,7 +235,7 @@ class DashboardState extends State<DashboardScreen> {
                 children: <Widget>[
                   new Container(
                     padding: const EdgeInsets.only(
-                        left: 10.0, top: 15.0,right: 10.0),
+                        left: 10.0, top: 15.0, right: 10.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -433,6 +427,9 @@ class DashboardState extends State<DashboardScreen> {
 //            }
         return SingleChildScrollView(
             child: new Container(
+              margin: const EdgeInsets.only(top: 25.0,bottom: 25.0),
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
           child: new Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -440,7 +437,7 @@ class DashboardState extends State<DashboardScreen> {
                 alignment: Alignment.topRight,
                 child: InkWell(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 10.0),
+                    padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
                     child: Text(
                       '\$26.50',
                       textAlign: TextAlign.end,
