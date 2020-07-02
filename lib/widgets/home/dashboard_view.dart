@@ -1,4 +1,3 @@
-
 import 'package:bezier_chart/bezier_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/elusive_icons.dart';
@@ -34,13 +33,15 @@ class DashboardState extends State<DashboardScreen> {
   void annualOffsetWidget() {
     Navigator.of(context).push(PageRouteBuilder(
         opaque: false,
-        pageBuilder: (BuildContext context, _, __) => AnnualOffsetDialog(),fullscreenDialog: false));
+        pageBuilder: (BuildContext context, _, __) => AnnualOffsetDialog(),
+        fullscreenDialog: false));
   }
 
   void myTreePoolWidget() {
     Navigator.of(context).push(PageRouteBuilder(
         opaque: false,
-        pageBuilder: (BuildContext context, _, __) => MyTreePoolDialog(),fullscreenDialog: false));
+        pageBuilder: (BuildContext context, _, __) => MyTreePoolDialog(),
+        fullscreenDialog: false));
   }
 
   @override
@@ -49,14 +50,15 @@ class DashboardState extends State<DashboardScreen> {
     var topSection = new Container(
         margin: const EdgeInsets.only(bottom: 25.0),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Stack(
+              alignment: Alignment.topLeft,
               children: <Widget>[
                 new Container(
-                  margin: EdgeInsets.only(
-                      left: 0, top: 20.0, right: 0.0, bottom: 0),
+                  margin: EdgeInsets.only(top: 20.0),
                   padding: const EdgeInsets.symmetric(
-                      vertical: 20.0, horizontal: 25.0),
+                      vertical: 20.0, horizontal: 20.0),
                   decoration: new BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.rectangle,
@@ -73,14 +75,14 @@ class DashboardState extends State<DashboardScreen> {
                           '3,900',
                           style: TextStyle(
                               color: Colors.teal[900],
-                              fontSize: 40.0,
+                              fontSize: 32.0,
                               fontWeight: FontWeight.w600),
                         ),
                         Text(
                           'carbon (kg)',
                           style: TextStyle(
                               color: Colors.grey,
-                              fontSize: 16.0,
+                              fontSize: 14.0,
                               fontWeight: FontWeight.w600),
                         ),
                       ],
@@ -99,85 +101,88 @@ class DashboardState extends State<DashboardScreen> {
                       onTap: annualOffsetWidget,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 15.0),
+                            vertical: 10.0, horizontal: 10.0),
                         child: Text(
                           'Your Annual Offset',
                           style: TextStyle(
                               color: Colors.green[50],
-                              fontSize: 18.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w600),
                         ),
                       ),
                     )),
               ],
             ),
-            Spacer(),
-            Stack(
+
+    Stack(
+      alignment: Alignment.topRight,
               children: <Widget>[
-                Align(
-                  alignment: Alignment.topRight,
-                  child: new Container(
-                    margin: EdgeInsets.only(
-                        left: 0, top: 20.0, right: 0.0, bottom: 0),
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 20.0, horizontal: 25.0),
+
+               new Container(
+                    margin: EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0,
+                        vertical: 20.0),
                     decoration: new BoxDecoration(
                       color: Colors.white,
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(30.0),
-                          bottomLeft: Radius.circular(30.0)),
+                          topLeft: Radius.circular(40.0),
+                          bottomLeft: Radius.circular(40.0)),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 20.0),
-                      child: Column(
-                        children: <Widget>[
-                          Text(
-                            '1,205',
-                            style: TextStyle(
-                                color: Colors.teal[900],
-                                fontSize: 40.0,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          Text(
-                            'carbon (t)',
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w600),
-                          ),
-                        ],
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          '1,205',
+                          style: TextStyle(
+                              color: Colors.teal[900],
+                              fontSize: 32.0,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        Text(
+                          'carbon (t)',
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      ],
                       ),
                     ),
-                  ),
                 ),
-                new Container(
-                  margin: const EdgeInsets.only(left: 10.0),
-                  decoration: new BoxDecoration(
-                    color: Colors.teal[900],
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20.0),
-                        bottomLeft: Radius.circular(20.0)),
-                  ),
-                  child: InkWell(
-                    onTap: myTreePoolWidget,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10.0, horizontal: 40.0),
-                      child: Text(
-                        'MyTree Pool',
-                        style: TextStyle(
-                            color: Colors.green[50],
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w600),
+
+                Align(
+                  alignment: Alignment.topRight,
+                  child:
+                  new Container(
+                    decoration: new BoxDecoration(
+                      color: Colors.teal[900],
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          bottomLeft: Radius.circular(20.0)),
+                    ),
+                    child: InkWell(
+                      onTap: myTreePoolWidget,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10.0, horizontal: 10.0),
+                        child: Text(
+                          'MyTree Pool',
+                          style: TextStyle(
+                              color: Colors.green[50],
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
                   ),
                 ),
               ],
-            ),
+
+    ),
           ],
         ));
 
@@ -196,7 +201,7 @@ class DashboardState extends State<DashboardScreen> {
             children: <Widget>[
               new Container(
                 padding:
-                    const EdgeInsets.only(top: 20.0, left: 30, right: 20.0),
+                    const EdgeInsets.only(top: 20.0, left: 30),
                 child: Column(
                   children: <Widget>[
                     new Padding(
@@ -211,13 +216,13 @@ class DashboardState extends State<DashboardScreen> {
                     new Text('$_n',
                         style: new TextStyle(
                             color: Colors.teal[900],
-                            fontSize: 45.0,
+                            fontSize: 40.0,
                             fontWeight: FontWeight.w600)),
                     Text(
                       'trees',
                       style: TextStyle(
                           color: Colors.grey,
-                          fontSize: 22.0,
+                          fontSize: 20.0,
                           fontWeight: FontWeight.w600),
                     ),
                     Container(
@@ -232,10 +237,11 @@ class DashboardState extends State<DashboardScreen> {
                 ),
               ),
               Stack(
+                alignment: Alignment.centerRight,
                 children: <Widget>[
                   new Container(
                     padding: const EdgeInsets.only(
-                        left: 10.0, top: 15.0, right: 10.0),
+                        left: 10.0, top: 15.0,right: 10.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -243,7 +249,7 @@ class DashboardState extends State<DashboardScreen> {
                           'Your annual offset',
                           style: TextStyle(
                               color: Colors.grey,
-                              fontSize: 20.0,
+                              fontSize: 18.0,
                               fontWeight: FontWeight.w600),
                         ),
                         Row(
@@ -252,14 +258,14 @@ class DashboardState extends State<DashboardScreen> {
                               '$_n',
                               style: TextStyle(
                                   color: Colors.teal[900],
-                                  fontSize: 40.0,
+                                  fontSize: 32.0,
                                   fontWeight: FontWeight.w600),
                             ),
                             Text(
                               '  tonnes',
                               style: TextStyle(
                                   color: Colors.grey,
-                                  fontSize: 16.0,
+                                  fontSize: 14.0,
                                   fontWeight: FontWeight.w600),
                             ),
                           ],
@@ -268,7 +274,7 @@ class DashboardState extends State<DashboardScreen> {
                           '2021 \'s predicted offset',
                           style: TextStyle(
                               color: Colors.grey,
-                              fontSize: 20.0,
+                              fontSize: 18.0,
                               fontWeight: FontWeight.w600),
                         ),
                         Row(
@@ -277,14 +283,14 @@ class DashboardState extends State<DashboardScreen> {
                               '$_n',
                               style: TextStyle(
                                   color: Colors.teal[900],
-                                  fontSize: 40.0,
+                                  fontSize: 32.0,
                                   fontWeight: FontWeight.w600),
                             ),
                             Text(
                               '  tonnes',
                               style: TextStyle(
                                   color: Colors.grey,
-                                  fontSize: 16.0,
+                                  fontSize: 14.0,
                                   fontWeight: FontWeight.w600),
                             ),
                           ],
@@ -295,7 +301,7 @@ class DashboardState extends State<DashboardScreen> {
                               margin: const EdgeInsets.only(top: 15.0),
                               child: new FlatButton(
                                   padding: const EdgeInsets.symmetric(
-                                      vertical: 5.0, horizontal: 30.0),
+                                      vertical: 5.0, horizontal: 10.0),
                                   onPressed: add,
                                   color: Colors.red[300],
                                   child: new Text(
@@ -313,9 +319,8 @@ class DashboardState extends State<DashboardScreen> {
                     ),
                   ),
                   Align(
-                    alignment: Alignment.bottomLeft,
+                    alignment: Alignment.bottomRight,
                     child: Container(
-                      margin: EdgeInsets.only(left: 180.0),
                       width: 50.0,
                       height: 50.0,
                       decoration: new BoxDecoration(
@@ -341,7 +346,7 @@ class DashboardState extends State<DashboardScreen> {
     );
 
     var bottomSection = new Container(
-      height: MediaQuery.of(context).size.height / 2,
+      height: MediaQuery.of(context).size.height,
       decoration: new BoxDecoration(
         color: Colors.green[900],
         shape: BoxShape.rectangle,
