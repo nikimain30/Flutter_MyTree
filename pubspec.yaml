@@ -29,8 +29,10 @@ dependencies:
   fluttericon: ^1.0.7
   scoped_model: ^0.3.0
   provider: ^3.2.0
-
   bezier_chart: "^1.0.16"
+  inject:
+    path: ./vendor/inject.dart/package/inject
+  build_runner: ^1.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -43,6 +45,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  inject_generator:
+    path: ./vendor/inject.dart/package/inject_generator
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
