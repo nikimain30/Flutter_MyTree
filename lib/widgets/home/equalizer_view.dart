@@ -38,7 +38,8 @@ class PoolState extends State<PoolScreen> {
                       fontWeight: FontWeight.w600),
                 ),
               ),
-            )),
+            )
+        ),
         new Container(
             decoration: new BoxDecoration(
               color: Colors.teal[900],

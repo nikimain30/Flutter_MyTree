@@ -52,50 +52,57 @@ class SignUpState extends State<SignUpScreen> {
                   bottomRight: Radius.circular(40.0)),
             ),
             child: Padding(
-              padding:
-              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
               child: Row(
                 children: <Widget>[
                   new Container(
                     padding: EdgeInsets.all(10.0),
-                    child: new Image.asset(
-                      'assets/logo.png',
-                      height: 40.0,
-                      width: 40.0,
+                    child: new  CircleAvatar(
+                      backgroundColor: Colors.indigo,
+                      backgroundImage: AssetImage('assets/logo.png'),
+                      radius: 20.0,
                     ),
                   ),
                   new Container(
                     padding: EdgeInsets.all(10.0),
-                    child: new Image.asset(
-                      'assets/logo.png',
-                      height: 40.0,
-                      width: 40.0,
+                    child: new  CircleAvatar(
+                      backgroundColor: Colors.blueAccent,
+                      backgroundImage: AssetImage('assets/logo.png'),
+                      radius: 20.0,
                     ),
                   ),
                   new Container(
                     padding: EdgeInsets.all(10.0),
-                    child: new Image.asset(
-                      'assets/logo.png',
-                      height: 40.0,
-                      width: 40.0,
+                    child: new  CircleAvatar(
+                      backgroundColor: Colors.blue[800],
+                      backgroundImage: AssetImage('assets/logo.png'),
+                      radius: 20.0,
                     ),
                   ),
                   new Container(
                     padding: EdgeInsets.all(10.0),
-                    child: new Image.asset(
-                      'assets/logo.png',
-                      height: 40.0,
-                      width: 40.0,
+                    child: new  CircleAvatar(
+                      backgroundColor: Colors.red[400],
+                      backgroundImage: AssetImage('assets/logo.png'),
+                      radius: 20.0,
                     ),
                   ),
                   new Container(
                     padding: EdgeInsets.all(10.0),
-                    child: new Image.asset(
-                      'assets/logo.png',
-                      height: 40.0,
-                      width: 40.0,
+                    child: new  CircleAvatar(
+                      backgroundColor: Colors.black,
+                      backgroundImage: AssetImage('assets/logo.png'),
+                      radius: 20.0,
                     ),
                   ),
+//                  new Container(
+//                    padding: EdgeInsets.all(10.0),
+//                    child: new Image.asset(
+//                      'assets/logo.png',
+//                      height: 40.0,
+//                      width: 40.0,
+//                    ),
+//                  ),
                 ],
               ),
             ),
