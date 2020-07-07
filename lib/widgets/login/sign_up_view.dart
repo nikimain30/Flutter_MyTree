@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttericon/entypo_icons.dart';
+import 'package:fluttericon/font_awesome_icons.dart';
 import 'package:pocketapp/pages/register/login_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -58,51 +60,56 @@ class SignUpState extends State<SignUpScreen> {
                   new Container(
                     padding: EdgeInsets.all(10.0),
                     child: new  CircleAvatar(
-                      backgroundColor: Colors.indigo,
-                      backgroundImage: AssetImage('assets/logo.png'),
-                      radius: 20.0,
+                      child: Icon(
+                        Entypo.facebook,
+                        size: 25.0,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   new Container(
                     padding: EdgeInsets.all(10.0),
                     child: new  CircleAvatar(
-                      backgroundColor: Colors.blueAccent,
-                      backgroundImage: AssetImage('assets/logo.png'),
-                      radius: 20.0,
+                      child: Icon(
+                        Entypo.twitter,
+                        size: 25.0,
+                        color: Colors.white,
+                      ),
+                      backgroundColor:Colors.blue[400],
                     ),
                   ),
                   new Container(
                     padding: EdgeInsets.all(10.0),
                     child: new  CircleAvatar(
-                      backgroundColor: Colors.blue[800],
-                      backgroundImage: AssetImage('assets/logo.png'),
-                      radius: 20.0,
+                      child: Icon(
+                        Entypo.linkedin,
+                        size: 25.0,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   new Container(
                     padding: EdgeInsets.all(10.0),
                     child: new  CircleAvatar(
-                      backgroundColor: Colors.red[400],
-                      backgroundImage: AssetImage('assets/logo.png'),
-                      radius: 20.0,
+                      child: Icon(
+                        FontAwesome.google,
+                        size: 25.0,
+                        color: Colors.white,
+                      ),
+                      backgroundColor:Colors.red,
                     ),
                   ),
                   new Container(
                     padding: EdgeInsets.all(10.0),
                     child: new  CircleAvatar(
-                      backgroundColor: Colors.black,
-                      backgroundImage: AssetImage('assets/logo.png'),
-                      radius: 20.0,
+                      child: Icon(
+                        FontAwesome.apple,
+                        size: 25.0,
+                        color: Colors.white,
+                      ),
+                      backgroundColor:Colors.black,
                     ),
                   ),
-//                  new Container(
-//                    padding: EdgeInsets.all(10.0),
-//                    child: new Image.asset(
-//                      'assets/logo.png',
-//                      height: 40.0,
-//                      width: 40.0,
-//                    ),
-//                  ),
                 ],
               ),
             ),
