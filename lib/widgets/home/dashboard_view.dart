@@ -427,7 +427,7 @@ class DashboardState extends State<DashboardScreen> {
 //            }
         return SingleChildScrollView(
             child: new Container(
-              margin: const EdgeInsets.only(top: 25.0,bottom: 25.0),
+              margin: const EdgeInsets.only(top: 25.0),
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
           child: new Column(
@@ -435,7 +435,6 @@ class DashboardState extends State<DashboardScreen> {
             children: <Widget>[
               Align(
                 alignment: Alignment.topRight,
-                child: InkWell(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 20.0),
                     child: Text(
@@ -447,7 +446,6 @@ class DashboardState extends State<DashboardScreen> {
                           fontSize: 20.0),
                     ),
                   ),
-                ),
               ),
               topSection,
               middleSection,

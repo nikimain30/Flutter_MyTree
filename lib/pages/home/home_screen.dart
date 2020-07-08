@@ -6,6 +6,7 @@ import 'package:pocketapp/widgets/home/dashboard_view.dart';
 import 'package:pocketapp/widgets/home/equalizer_view.dart';
 import 'package:pocketapp/widgets/home/settings_view.dart';
 import 'package:pocketapp/widgets/home/user_view.dart';
+import 'package:pocketapp/widgets/market/pool_view.dart';
 
 
 class HomeScreen extends StatefulWidget {
