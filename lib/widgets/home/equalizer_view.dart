@@ -40,21 +40,6 @@ class PoolState extends State<PoolScreen> {
           )
       ),
     );
-//    return  SingleChildScrollView(
-//      child : Container(
-//        margin: const EdgeInsets.only(top: 25.0),
-//        width: MediaQuery.of(context).size.width,
-//        height: MediaQuery.of(context).size.height,
-//        child: Column(
-//          crossAxisAlignment: CrossAxisAlignment.end,
-//          mainAxisAlignment: MainAxisAlignment.start,
-//          children: <Widget>[
-//            getMarketUI(),
-//            getTabUI(categoryType),
-//          ],
-//        ),
-//      )
-//    );
   }
 
   Widget getTabUI(CategoryType categoryTypeData) {
