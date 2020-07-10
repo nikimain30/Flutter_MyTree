@@ -24,7 +24,7 @@ class BuyState extends State<BuyScreen> {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Align(
             alignment: Alignment.topRight,
@@ -63,51 +63,48 @@ class BuyState extends State<BuyScreen> {
                         ],
                       )),
                 ),
-                Align (
-                  alignment: Alignment.bottomRight,
-                  child:  Container(
-                    margin: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * .13),
-                    decoration: new BoxDecoration(
-                      color: Colors.teal[900],
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20.0),
-                          bottomLeft: Radius.circular(20.0)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10.0),
-                      child: Row(
-                        children: <Widget>[
-                          Text(
-                            'Need a little extra help?',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 5, horizontal: 5),
-                            margin:
-                            const EdgeInsets.only(left: 10.0, right: 10.0),
-                            decoration: new BoxDecoration(
-                              color: Colors.white,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Entypo.info,
-                              size: 22.0,
-                              color: Colors.green[900],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                )
-
+//                Container(
+//                    margin: EdgeInsets.only(
+//                        top: MediaQuery.of(context).size.height * .14),
+//                    decoration: new BoxDecoration(
+//                      color: Colors.teal[900],
+//                      shape: BoxShape.rectangle,
+//                      borderRadius: BorderRadius.only(
+//                          topLeft: Radius.circular(20.0),
+//                          bottomLeft: Radius.circular(20.0)),
+//                    ),
+//                    child: Padding(
+//                      padding: const EdgeInsets.only(left: 20.0,
+//                          top: 5.0,bottom: 5.0),
+//                      child: Row(
+//                        children: <Widget>[
+//                          Text(
+//                            'Need a little extra help?',
+//                            style: TextStyle(
+//                                color: Colors.white,
+//                                fontSize: 18.0,
+//                                fontWeight: FontWeight.w600),
+//                          ),
+//                          Container(
+//                            padding: const EdgeInsets.symmetric(
+//                                vertical: 5, horizontal: 5),
+//                            margin:
+//                            const EdgeInsets.only(left: 10.0, right: 10.0),
+//                            decoration: new BoxDecoration(
+//                              color: Colors.white,
+//                              shape: BoxShape.circle,
+//                            ),
+//                            child: Icon(
+//                              Entypo.info,
+//                              size: 22.0,
+//                              color: Colors.green[900],
+//                            ),
+//                          ),
+//                        ],
+//                      ),
+//
+//                  ),
+//                )
               ],
             ),
           ),
